@@ -1,14 +1,30 @@
 // Initialize Firebase
+// * setting config as var object will initialize firebase/set environment
 var config = {
+
+    // * api key is needed to gain access/ have permission to our database
     apiKey: "AIzaSyDY0ap1bIDwwvSRsvusGOtH1ow7F6AqPyU",
+
+    // * auth domain gives access to our specific domain
     authDomain: "hiawesomehumans.firebaseapp.com",
+
+    // *where our database is stored
     databaseURL: "https://hiawesomehumans.firebaseio.com",
+
+    // *unique identifier for project
     projectId: "hiawesomehumans",
+
+    // *enables chat within firebase IT
     messagingSenderId: "501987551176",
+
+    // *name of project, only visible internally 
     name: "Hi Humans!"
   };
+
+//   *initializing the app, calling the config object
   firebase.initializeApp(config);
   
+//   *
   const auth = firebase.auth();
   const db = firebase.database();
   var uid;
